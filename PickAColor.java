@@ -14,7 +14,10 @@ public class PickAColor {
 
     while (!color.equalsIgnoreCase("yellow") &&
             !color.equalsIgnoreCase("orange") &&
-            !color.equalsIgnoreCase("red")) {
+            !color.equalsIgnoreCase("red") &&
+            !color.equalsIgnoreCase("green") &&
+            !color.equalsIgnoreCase("blue") &&
+            !color.equalsIgnoreCase("purple")) {
       System.out.println("\nNot a valid color.");
       System.out.println("Pick Another Color >:[");
       System.out.print("--> ");
@@ -28,6 +31,12 @@ public class PickAColor {
       food = "Jamba Juice";
     } else if (color.equalsIgnoreCase("red")) {
       food = "Sbarro";
+    } else if (color.equalsIgnoreCase("green")) {
+      food = "Subway";
+    } else if (color.equalsIgnoreCase("blue")) {
+      food = "IHOP";
+    } else if (color.equalsIgnoreCase("purple")) {
+      food = "Taco Bell";
     }
 
     System.out.println("\nYou should go to " + food + "!");
