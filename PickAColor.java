@@ -12,12 +12,24 @@ public class PickAColor {
     System.out.print("Pick A Color! ");
     String color = console.next();
 
-    while (!color.equalsIgnoreCase("yellow")) {
+    while (!color.equalsIgnoreCase("yellow") &&
+            !color.equalsIgnoreCase("orange") &&
+            !color.equalsIgnoreCase("red")) {
       System.out.println("\nNot a valid color.");
       System.out.println("Pick Another Color >:[");
       System.out.print("--> ");
       color = console.next();
     }
 
+    String food = "";
+    if (color.equalsIgnoreCase("yellow")) {
+      food = "Mcdonald";
+    } else if (color.equalsIgnoreCase("orange")) {
+      food = "Jamba Juice";
+    } else if (color.equalsIgnoreCase("red")) {
+      food = "Sbarro";
+    }
+
+    System.out.println("\nYou should go to " + food + "!");
   }
 }
