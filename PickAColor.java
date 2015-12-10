@@ -10,6 +10,8 @@ public class PickAColor {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         Random rand = new Random();
+        
+        String[] yellow = {"Mcdonalds", "Carl's Jr"};
 
         System.out.println("Are you hungry?");
         System.out.print("Pick A Color! ");
@@ -30,11 +32,7 @@ public class PickAColor {
         String food = "";
         if (color.equalsIgnoreCase("yellow")) {
             int num = rand.nextInt(2) + 1;
-            if (num == 1) {
-                food = "Mcdonalds";
-            } else if (num == 2) {
-                food = "Carl's Jr";
-            } 
+            food = yellow[num]; 
         } else if (color.equalsIgnoreCase("orange")) {
             food = "Jamba Juice";
         } else if (color.equalsIgnoreCase("red")) {
